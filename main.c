@@ -2,12 +2,16 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]){
-    int sec;
+    int year;
+    int result;
     
-    printf("input the second: ");
-    scanf("%i", &sec);
+    printf("input the year: ");
+    scanf("%i", &year);
     
-    printf("the time is %i : %i\n", sec/60, sec%60);
+    result = (year%4 == 0 && year%100 != 0) || (year%400 == 0);
+    // True = 1, False =0
+    
+    printf("is the year %i the leap year? : %i\n", year, result);
     
     system("PAUSE");
     return 0;
